@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LUMA - 光影智造 | 跨境电商AI图制作</title>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans for high-end feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- html2canvas for Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+              serif: ['Georgia', 'serif'],
+            },
+            colors: {
+              // 高级黑白灰体系
+              studio: {
+                50: '#fafafa', // 极浅灰背景
+                100: '#f4f4f5', // 浅灰面板背景
+                200: '#e4e4e7', // 边框线
+                300: '#d4d4d8', // 禁用/占位
+                400: '#a1a1aa', // 辅助文字
+                500: '#71717a', // 次要文字
+                600: '#52525b',
+                700: '#3f3f46',
+                800: '#27272a', // 深色文字
+                900: '#18181b', // 主黑色/按钮
+                950: '#09090b',
+              },
+              // 强调色 (克制的暖调)
+              accent: {
+                DEFAULT: '#18181b', 
+                light: '#F5F5F0', // 选中背景
+              }
+            },
+            boxShadow: {
+              'glass': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'sharp': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+              'float': '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
+            },
+            borderRadius: {
+              'xs': '2px',
+              'sm': '4px',
+              'md': '6px',
+              'lg': '8px',
+              'xl': '12px',
+              '2xl': '16px',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* 全局滚动条美化 - 极细风格 */
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d4d8;
+        border-radius: 2px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a1a1aa;
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fafafa;
+        color: #18181b;
+      }
+      
+      .dark body {
+        background-color: #18181b;
+        color: #fafafa;
+      }
+      
+      ::selection {
+        background-color: #18181b;
+        color: white;
+      }
+      
+      /* 移除浏览器默认 focus ring，改用自定义 */
+      *:focus-visible {
+        outline: 2px solid #18181b;
+        outline-offset: 1px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.9",
+    "use-image": "https://aistudiocdn.com/use-image@^1.1.4",
+    "react-konva": "https://aistudiocdn.com/react-konva@^19.2.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
